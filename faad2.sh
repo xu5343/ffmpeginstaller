@@ -19,6 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
+WGET_URL=`cat ./url.txt`
 SOURCE_URL='http://mirror.ffmpeginstaller.com/source/faad2'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
@@ -29,7 +30,8 @@ sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
 cd $INSTALL_SDIR/
 rm -rf faad2*
-wget $SOURCE_URL/$_package
+#wget $SOURCE_URL/$_package
+wget $WGET_URL/$_package
 tar -xvzf $_package
 cd faad2-2.7/
 ./bootstrap

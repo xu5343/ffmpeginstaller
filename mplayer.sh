@@ -19,19 +19,19 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/mplayer'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
-_package='mplayer.tar.gz'
+_package='MPlayer-1.3.0.tar.xz'
 clear
 sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
 
 cd $INSTALL_SDIR/
 rm -rf mplayer*
-#wget $SOURCE_URL/$_package
-#tar -xvzf $_package
+#wget $WGET_URL/$_package
+#tar xJfv $_package
 wget http://www.mplayerhq.hu/MPlayer/releases/MPlayer-1.3.0.tar.xz
 tar xJfv MPlayer-1.3.0.tar.xz
 cd MPlayer-1.3.0

@@ -1,6 +1,7 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
 SOURCE_URL='http://mirror.ffmpeginstaller.com/source/git'
 INSTALL_DDIR='/usr/local/cpffmpeg'

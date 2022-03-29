@@ -19,6 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
+WGET_URL=`cat ./url.txt`
 SOURCE_URL='http://mirror.ffmpeginstaller.com/source/codecs'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`

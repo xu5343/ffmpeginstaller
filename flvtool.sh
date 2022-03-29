@@ -1,8 +1,8 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/flvtool2'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -16,7 +16,7 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf flvtool*
-   #wget $SOURCE_URL/$flvtool_source
+   #wget $WGET_URL/$flvtool_source
    #tar -zxvf  $_package
    git clone https://github.com/unnu/flvtool2
    cd flvtool2/

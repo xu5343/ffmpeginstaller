@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/libvorbis'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -32,7 +32,7 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf libvorbis*
-   wget $SOURCE_URL/$libvorbis_source
+   wget $WGET_URL/$libvorbis_source
    tar -xvzf $_package
    cd libvorbis-1.3.4/
    ./configure --prefix=$INSTALL_DDIR

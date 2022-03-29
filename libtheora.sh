@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/libtheora'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -32,7 +32,7 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf libtheora*
-   wget $SOURCE_URL/$libtheora
+   wget $WGET_URL/$libtheora
    tar -xvzf $libtheora
    cd libtheora-1.1.1/
    ./configure --prefix=$INSTALL_DDIR --with-ogg=$INSTALL_DDIR --with-vorbis=$INSTALL_DDIR

@@ -1,6 +1,7 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
 SOURCE_URL='http://download.savannah.gnu.org/releases/freetype/'
 INSTALL_DDIR='/usr/local/cpffmpeg'
@@ -14,7 +15,8 @@ ldconfig
 cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf freetype*
-   wget $SOURCE_URL/$_package
+   #wget $SOURCE_URL/$_package
+   wget $WGET_URL/$_package
    tar -zxvf $_package
    cd freetype-2.7/
    ./configure --prefix=$INSTALL_DDIR 

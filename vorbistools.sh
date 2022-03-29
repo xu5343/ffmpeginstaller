@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/vorbistools'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -30,7 +30,7 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf vorbis-tools*
-   wget $SOURCE_URL/$vorbistools
+   wget $WGET_URL/$vorbistools
    tar -xvzf $vorbistools
    cd vorbis-tools-1.4.0/
    ./configure --prefix=$INSTALL_DDIR

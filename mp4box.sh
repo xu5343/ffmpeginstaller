@@ -1,6 +1,7 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
 SOURCE_URL='https://github.com/gpac/gpac/archive'
 INSTALL_DDIR='/usr/local/cpffmpeg'
@@ -24,6 +25,7 @@ ldconfig
 #Fix lastest bug
 #git clone https://github.com/gpac/gpac.git
 #cd gpac
+#wget $WGET_URL/$_package
 wget https://github.com/gpac/gpac/archive/v0.7.1.tar.gz
 tar xfz v0.7.1.tar.gz
 cd gpac-0.7.1

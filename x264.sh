@@ -19,11 +19,12 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/x264'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
 _package='x264'
+_last='last_stable_x264.tar.bz2'
 clear
 sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
@@ -31,6 +32,9 @@ ldconfig
 cd $INSTALL_SDIR
 echo "Removing old source"
    rm -vrf $INSTALL_SDIR/x264-snapshot*
+   #wget $WGET_URL/$_last
+   #tar xvjf $_last
+   #cd x264-snapshot-*-stable/
 	git clone git://git.videolan.org/x264.git
 	cd x264/
 	./configure  --prefix=$INSTALL_DDIR --enable-shared --disable-asm

@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/uriparser'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -31,7 +31,7 @@ cd $INSTALL_SDIR/
 rm -rf uriparser*
 
 yum -y install doxygen graphviz-devel graphviz expat expat-devel
-wget -c $SOURCE_URL/$_package
+wget -c $WGET_URL/$_package
 tar -xvjf $_package
 cd uriparser-0.8.0/
 ./configure  --prefix=/usr/local/cpffmpeg --disable-test

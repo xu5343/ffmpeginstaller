@@ -1,6 +1,7 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
 SOURCE_URL='http://mirror.ffmpeginstaller.com/source/ffmpeg'
 INSTALL_DDIR='/usr/local/cpffmpeg'
@@ -24,7 +25,7 @@ ldconfig
 --pkg-config-flags="--static" \
 --enable-gpl --enable-shared --enable-nonfree \
 --enable-pthreads  --enable-libopencore-amrnb --enable-libopencore-amrwb \
---enable-libmp3lame --enable-libvpx --enable-libfdk-aac --enable-libfreetype \
+--enable-libmp3lame --enable-openssl --enable-libvpx --enable-libfdk-aac --enable-libfreetype \
 --enable-libtheora --enable-libvorbis  --enable-libx264 --enable-libx265 --enable-libxvid \
 --enable-postproc --enable-swscale --enable-avfilter --enable-runtime-cpudetect \
 --extra-cflags=-I/usr/local/cpffmpeg/include/ --extra-ldflags=-L/usr/local/cpffmpeg/lib \

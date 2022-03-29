@@ -2,6 +2,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
+WGET_URL=`cat ./url.txt`
 SOURCE_URL='https://github.com/mstorsjo/fdk-aac/archive'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
@@ -13,7 +14,8 @@ echo -e $RED"Installation of $_package ....... started"$RESET
 
 cd $INSTALL_SDIR/
 rm -rf fdk-aac*
-wget $SOURCE_URL/$_package
+#wget $SOURCE_URL/$_package
+wget $WGET_URL/$_package
 tar -xvzf $_package
 cd fdk-aac-0.1.4/
 ./autogen.sh

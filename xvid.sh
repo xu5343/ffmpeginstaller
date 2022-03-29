@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/xvidcore/'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -31,6 +31,7 @@ ldconfig
 cd $INSTALL_SDIR
 echo "Removing old source"
    rm -vrf xvid*
+   #wget $WGET_URL/$_package
    wget http://downloads.xvid.org/downloads/xvidcore-1.3.4.tar.gz
    tar -xvzf $_package
    cd xvidcore/build/generic/

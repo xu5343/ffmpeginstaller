@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/yasm'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -30,7 +30,7 @@ ldconfig
 cd $INSTALL_SDIR
 echo "Removing old source"
 rm -vrf yasm*
-wget $SOURCE_URL/$_package
+wget $WGET_URL/$_package
 tar -xvzf $_package
 cd  yasm-1.2.0/
 	./configure --prefix=/usr/local/cpffmpeg/ 

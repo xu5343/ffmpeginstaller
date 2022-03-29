@@ -1,8 +1,9 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://www-us.apache.org/dist/subversion'
+SOURCE_URL='https://archive.apache.org/dist/subversion'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -21,6 +22,7 @@ fi
 if [ -e "/usr/bin/svn" ]; then
 	ln -sf /usr/bin/svn /usr/local/cpffmpeg/bin/svn
 else
+   	#wget $WGET_URL/$_package
    	wget $SOURCE_URL/$_package
    	tar -zxvf $_package
    	cd subversion-1.9.5/

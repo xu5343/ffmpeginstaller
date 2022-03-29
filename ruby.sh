@@ -1,6 +1,7 @@
 #!/bin/bash
 RED='\033[01;31m'
 RESET='\033[0m'
+WGET_URL=`cat ./url.txt`
 INSTALL_SDIR='/usr/src/ffmpegscript'
 SOURCE_URL='https://cache.ruby-lang.org/pub/ruby/2.3'
 INSTALL_DDIR='/usr/local/cpffmpeg'
@@ -23,6 +24,7 @@ else
 	cd $INSTALL_SDIR
 	echo "removing old source"
    	rm -vrf ruby*
+   	#wget $WGET_URL/$ruby
    	wget $SOURCE_URL/$ruby
    	tar -xvzf  $ruby
    	cd ruby-2.3.1/

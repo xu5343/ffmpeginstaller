@@ -2,6 +2,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
+WGET_URL=`cat ./url.txt`
 SOURCE_URL='http://www.penguin.cz/~utx/ftp/amr'
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
@@ -14,7 +15,8 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf amrwb*
-   wget $SOURCE_URL/$_package
+   #wget $SOURCE_URL/$_package
+   wget $WGET_URL/$_package
    tar -xvjf $_package
    cd amrwb-11.0.0.0/
    ./configure --prefix=$INSTALL_DDIR

@@ -19,7 +19,7 @@
 RED='\033[01;31m'
 RESET='\033[0m'
 INSTALL_SDIR='/usr/src/ffmpegscript'
-SOURCE_URL='http://mirror.ffmpeginstaller.com/source/libwmf/'
+WGET_URL=`cat ./url.txt`
 INSTALL_DDIR='/usr/local/cpffmpeg'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export TMPDIR=$HOME/tmp
@@ -33,7 +33,7 @@ cd $INSTALL_SDIR
 sleep 2
 echo "removing old source"
    rm -vrf libwmf*
-   wget $SOURCE_URL/$libwmf
+   wget $WGET_URL/$libwmf
    tar -xvzf  $libwmf
    cd libwmf-0.2.8.4/
    ./configure --prefix=$INSTALL_DDIR --with-freetype=/usr/local/cpffmpeg
