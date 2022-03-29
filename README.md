@@ -14,13 +14,22 @@ it's free
  * add x265
  * update something soft version
 
-### Installer  
+### Installer  -V1 （CentOS 7 64bit）
 ```
 yum install git -y 
 cd /usr/local/src  
-git clone https://github.com/ninetian/ffmpeginstaller.git ffmpeginstaller  
+git clone https://github.com/xu5343/ffmpeginstaller.git ffmpeginstaller  
 cd ffmpeginstaller  
 sh install.sh  
+```
+
+### Installer  -V2 （CentOS 8 64bit）
+```
+yum install -y git wget
+cd /opt
+git clone https://github.com/hostsoft/ffmpegtoolkit.git ffmpegtoolkit
+cd ffmpegtoolkit
+bash install.sh
 ```
   
 ### Check Path  
