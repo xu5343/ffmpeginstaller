@@ -6,7 +6,7 @@ it's free
  * install mplayer mencoder
  * install mp4box flvtool2 yamdi
  * install mediainfo neroaccenc 
- * working CentOS 7.* 64bit, other not testing
+ * working CentOS 7.* 64bit CentOS 8.* 64bit, other not testing
 
 ### Update
  * add NVIDIA CUDA   
