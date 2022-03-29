@@ -35,7 +35,7 @@ echo "Removing old source"
    #wget $WGET_URL/$_last
    #tar xvjf $_last
    #cd x264-snapshot-*-stable/
-	git clone git://git.videolan.org/x264.git
+	git clone https://code.videolan.org/videolan/x264.git
 	cd x264/
 	./configure  --prefix=$INSTALL_DDIR --enable-shared --disable-asm
 	make -j$cpu
