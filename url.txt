@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/xu5343/ffmpeginstaller/package/master
+https://raw.githubusercontent.com/xu5343/ffmpeginstaller/master/package
