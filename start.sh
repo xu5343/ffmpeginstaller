@@ -185,7 +185,7 @@ fi
 # preset 
 sh preset.sh
 #Rebuilding Mplayer
-sh mplayer.sh
+#sh mplayer.sh
 if [ -e "/usr/local/cpffmpeg/bin/mplayer" ]; then
         echo " "
 else
