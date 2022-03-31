@@ -85,6 +85,7 @@ ldconfig
 
 #Re insert
 cd /usr/local/src/ffmpeginstaller
+dos2unix *.sh
 
 #addon
 #sh presetup2.sh
