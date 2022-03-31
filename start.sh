@@ -18,7 +18,7 @@ if [ -e "/etc/yum.conf" ];then
 	yum install -y epel-release
         echo "Ensuring required RPM ........"
         yum install -y \
-        gcc gcc-c++ libgcc glib glib2 unzip bzip2 dos2unix make cmake automake autoconf patch git ruby ncurses ncurses-devel mercurial hg neon expat expat-devel alsa-lib \
+        gcc gcc-c++ libgcc glib glib2 unzip bzip2 dos2unix openssl make cmake automake autoconf patch git ruby ncurses ncurses-devel mercurial hg neon expat expat-devel alsa-lib \
         zlib zlib-devel libjpeg libjpeg-devel libpng libpng-devel gd gd-devel gettext freetype freetype-devel ImageMagick ImageMagick-devel \
         libstdc++ libstdc++-devel numactl numactl-devel opus opus-devel mediainfo re2c giflib-devel giflib libtiff libtiff-devel libtool libxml libxml2 libxml2-devel \
         #yum install samba-common* apr-util -y
