@@ -158,17 +158,17 @@ sh x265.sh
 #re2c
 #sh re2c.sh
 #Mplayer
-sh mplayer.sh
-if [ -e "/usr/local/cpffmpeg/bin/mplayer" ]; then
-        echo " "
-else
-        echo " "
-        echo " "
-        echo -e $RED"   Mplayer installation Failed :( "$RESET
-        echo " "
-        echo " "
-        exit
-fi
+#sh mplayer.sh
+#if [ -e "/usr/local/cpffmpeg/bin/mplayer" ]; then
+ #       echo " "
+#else
+ #       echo " "
+  #      echo " "
+   #     echo -e $RED"   Mplayer installation Failed :( "$RESET
+    #    echo " "
+     #   echo " "
+      #  exit
+#fi
 
 #ffmpeg
 #sh ffmpeg.sh
