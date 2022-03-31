@@ -16,10 +16,11 @@ ldconfig
    cd $INSTALL_SDIR
 echo "removing old source"
    rm -vrf flvtool*
-   #wget $WGET_URL/$flvtool_source
-   #tar -zxvf  $_package
-   git clone https://github.com/unnu/flvtool2
-   cd flvtool2/
+   wget $WGET_URL/$flvtool_source
+   tar -zxvf  $_package
+   cd flvtool2-1.0.6/
+   #git clone https://github.com/unnu/flvtool2
+   #cd flvtool2/
    /usr/local/cpffmpeg/bin/ruby setup.rb config
    /usr/local/cpffmpeg/bin/ruby setup.rb setup
    /usr/local/cpffmpeg/bin/ruby setup.rb install
